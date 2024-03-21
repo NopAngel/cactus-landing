@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+:root{
+    --bg-color:hsl(228, 6%, 8%);
+    --bg-text:#fff;
+    --bg-font:'Montserrat',sans-serif;
+    --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
+    --primary-color:hsl(93, 50%, 48%);
+    --description-color:hsla(0, 28%, 95%, 0.764);
+    --gradient-card: linear-gradient(180deg,
+                                hsla(93, 8%, 8%),
+                                hsla(93, 40%, 30%));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--bg-text);
+    font-family: var(--bg-font);
+}
+
+.banner__home{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+}
+.banner__home img{
+    width: 500px;
+    margin: 12px;
+    margin-right: 20px;
+    animation: imgMove 4s infinite;
+    filter: drop-shadow(var(--shadow-img));
+}
+
+.banner__home h1{
+    font-size: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.banner__home p{
+    color: var(--description-color);
+}
+
+.banner__home h1 span{
+    color: var(--primary-color);
+}
+
+.banner__home .container_text{
+    max-width: 800px;
+}
+
+.banner__home button{
+    padding: 10px;
+    border-radius: 60px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.banner__home button i{
+    padding: 6px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.banner__home button.btn__info{
+    background-color: transparent;
+    color: #fff;
+    margin-left: 30px;
+}
+
+/*BANNER INFO*/
+
+
+.banner__info{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.banner__info .container_text{
+    margin-right: 30px;
+}
+
+.banner__info .container_text h1{
+    font-size: 40px;
+    max-width: 350px;
+    text-transform: uppercase;
+}
+
+.banner__info .container_card .card_plants{
+    width: 250px;
+    background: var(--gradient-card);
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+}
+
+.banner__info .container_card .card_plants img{
+    width: 200px;
+    transition: all .3s;
+}
+
+.banner__info .container_card .card_plants img:hover{
+    width: 220px;
+    transform: translateY(-23px);
+}
+
+.plant_card_0{
+    margin: 20px;
+}
+
+/*BEST PLANT*/
+
+.banner_best_plants{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+    
+}
+
+.banner_best_plants h1{
+    font-size: 30px;
+}
+
+.card{
+    display: inline-block;
+    background: var(--gradient-card);
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    max-width: 300px;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.card:hover{
+    transform: scale(120%);
+    z-index: 1;
+}
+
+.card h1{
+    padding: 3px;
+}
+
+.card button{
+    padding: 6px;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+}
+
+.card img{
+    width: 250px;
+}
+
+/*CONTACT METHODS*/
+
+.banner__contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__contact .container__text{
+    margin-right: 60px;
+}
+
+.banner__contact h1{
+    font-size: 25px;
+}
+
+.banner__contact i{
+    padding: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.banner__contact span{
+    padding: 6px;
+    color: var(--description-color);
+}
+
+.banner__contact .container__image img{
+    width: 700px;
+    animation: imgMove 6s infinite;
+    filter:drop-shadow(var(--shadow-img));
+}
+
+/*FOOTER*/
+
+footer{
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.content__text{
+    position: absolute;
+    left: 120px;
+}
+
+.social_content{
+    position: absolute;
+    right: 120px;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer li a{
+    font-size: 20px;
+    padding: 10px;
+    color: var(--description-color);
+}
+
+.rows_content{
+    display: flex;
+    padding: 10px;
+}
+
+/*ANIMATIONS*/
+
+@keyframes imgMove {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/* mobile mode */
+
+@media screen and (max-width:900px) {
+    .banner__home {
+        display: block;
+        height: 100vh;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .banner__info{
+        display: block;
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 50%;
+    }
+
+    .banner_best_plants{
+        display: block;
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 160%;
+    }
+
+    .banner__contact{
+        display: block;
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 20%;
+    }
+
+    .banner__contact .container__image img{
+        width: 300px;
+        margin-top: 20px;
+    }
+}
